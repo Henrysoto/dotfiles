@@ -68,9 +68,9 @@ nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols
 nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+"nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+"nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " Select suggestion
@@ -99,21 +99,47 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " NERDTree keybindings
-nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <silent> <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <silent> <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-" move between tabs
-nnoremap <leader>1 1gt
-nnoremap <leader>2 2gt
-nnoremap <leader>3 3gt
-nnoremap <leader>4 4gt
-nnoremap <leader>5 5gt
-nnoremap <leader>6 6gt
-nnoremap <leader>7 7gt
-nnoremap <leader>8 8gt
-nnoremap <leader>9 9gt
+" Move to previous/next
+nnoremap <silent>    <leader>, <Cmd>BufferPrevious<CR>
+nnoremap <silent>    <leader>. <Cmd>BufferNext<CR>
+
+" Goto buffer in position...
+nnoremap <silent>    <leader>1 <Cmd>BufferGoto 1<CR>
+nnoremap <silent>    <leader>2 <Cmd>BufferGoto 2<CR>
+nnoremap <silent>    <leader>3 <Cmd>BufferGoto 3<CR>
+nnoremap <silent>    <leader>4 <Cmd>BufferGoto 4<CR>
+nnoremap <silent>    <leader>5 <Cmd>BufferGoto 5<CR>
+nnoremap <silent>    <leader>6 <Cmd>BufferGoto 6<CR>
+nnoremap <silent>    <leader>7 <Cmd>BufferGoto 7<CR>
+nnoremap <silent>    <leader>8 <Cmd>BufferGoto 8<CR>
+nnoremap <silent>    <leader>9 <Cmd>BufferGoto 9<CR>
+
+" Close all buffer
+nnoremap <silent>    <leader>C <Cmd>BufferCloseAllButCurrent<CR>
+
+" Close buffer
+nnoremap <silent>    <leader>c <Cmd>BufferClose<CR>
+
+" Wipeout buffer
+"                          :BufferWipeout
+" Close commands
+"                          :BufferCloseAllButCurrent
+"                          :BufferCloseAllButVisible
+"                          :BufferCloseAllButPinned
+"                          :BufferCloseAllButCurrentOrPinned
+"                          :BufferCloseBuffersLeft
+"                          :BufferCloseBuffersRight
+
+" Sort automatically by...
+nnoremap <silent> <Space>bb <Cmd>BufferOrderByBufferNumber<CR>
+nnoremap <silent> <Space>bd <Cmd>BufferOrderByDirectory<CR>
+nnoremap <silent> <Space>bl <Cmd>BufferOrderByLanguage<CR>
+nnoremap <silent> <Space>bw <Cmd>BufferOrderByWindowNumber<CR>
 
 " User settings
 set background=dark

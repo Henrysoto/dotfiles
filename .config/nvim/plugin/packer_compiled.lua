@@ -74,10 +74,25 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/aem/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/aem/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
+  },
+  ["interestingwords.nvim"] = {
+    loaded = true,
+    path = "/home/aem/.local/share/nvim/site/pack/packer/start/interestingwords.nvim",
+    url = "https://github.com/Mr-LLLLL/interestingwords.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/aem/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   nerdcommenter = {
     loaded = true,
